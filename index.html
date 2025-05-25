@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="We find accurate borewell points using advanced German technology & nature study. Trusted by farmers & industries.">
+<meta property="og:title" content="सर्वज्ञ भूजल सर्व्हेअर">
+<meta property="og:description" content="Well & borewell detection using tech + nature.">
+
+
+  <title>सर्वज्ञ भूजल सर्व्हेअर</title>
+  <link rel="icon" href="logo.webp" type="image/png" />
+
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Basic Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background-color: #f9f9f9;
+    }
+
+    /* Navbar */
+    .navbar {
+      background-color: #004d40;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      flex-wrap: wrap;
+    }
+
+    .navbar .logo img {
+      height: 50px;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 15px;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+    }
+
+    .nav-links a:hover {
+      text-decoration: underline;
+    }
+
+    /* Card Section */
+    .card-section {
+      display: flex;
+      justify-content: center;
+      padding: 20px;
+      background-color: #e0f2f1;
+    }
+
+    .card {
+      display: flex;
+      max-width: 1000px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      flex-wrap: wrap;
+    }
+
+    .card-image img {
+      width: 100%;
+      max-width: 400px;
+      height: auto;
+    }
+
+    .card-info {
+      padding: 20px;
+      flex: 1;
+    }
+
+    .card-info h2 {
+      margin-bottom: 10px;
+      color: #00695c;
+    }
+
+    /* Section Styling */
+    section {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h2 {
+      color: #004d40;
+      margin-bottom: 20px;
+    }
+
+    /* Services List */
+    .services-section ul {
+      padding-left: 20px;
+    }
+
+    .services-section li {
+      margin-bottom: 10px;
+    }
+
+    /* Contact Form */
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      background: #ffffff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    input, textarea {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+
+    button {
+      padding: 10px;
+      background-color: #00695c;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+
+    button:hover {
+      background-color: #004d40;
+    }
+
+    /* Video Gallery */
+    .video-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+    }
+
+    video {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Responsive Layout */
+    @media (max-width: 768px) {
+      .card {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .nav-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        margin-top: 10px;
+      }
+    }
+    .contact-details {
+  background-color: #e0f7fa;
+  padding: 30px 20px;
+  text-align: center;
+  border-top: 2px solid #00695c;
+}
+
+.contact-details h2 {
+  color: #004d40;
+  margin-bottom: 20px;
+}
+
+.contact-box {
+  max-width: 600px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  font-size: 1.1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-box p {
+  margin-bottom: 15px;
+}
+
+.contact-box a {
+  color: #00695c;
+  text-decoration: none;
+}
+
+.contact-box a:hover {
+  text-decoration: underline;
+}
+h2 {
+    color: #ffffff;
+    margin-bottom: 2px;
+    margin-left: 2%;
+}
+
+ /* Loader Fullscreen */
+#loader {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: white;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Pulse Dots */
+.dots-loader {
+  display: flex;
+  gap: 10px;
+}
+
+.dots-loader span {
+  width: 15px;
+  height: 15px;
+  background: #0d47a1;
+  border-radius: 50%;
+  animation: pulse 1s infinite ease-in-out;
+}
+
+.dots-loader span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.dots-loader span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes pulse {
+  0%, 80%, 100% {
+    transform: scale(0.6);
+    opacity: 0.4;
+  }
+  40% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+
+
+    
+  </style>
+</head>
+<body>
+    <script src="script.js"></script>
+    <!-- Loader -->
+<div id="loader">
+  <div class="dots-loader">
+    <span></span><span></span><span></span>
+  </div>
+</div>
+
+  <!-- ===== Navbar Section ===== -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <img src="logo.webp" alt=" " /> <!-- Replace with your logo -->
+      </div>
+      <h2>Sarvdny Water Detection</h2>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ===== Home Section with Card ===== -->
+  <section id="home" class="card-section">
+    <div class="card">
+      <div class="card-image">
+        <img src="mation.webp" alt="Water Detection Machine" /> <!-- Replace with your image -->
+      </div>
+      <div class="card-info">
+        <h2>High Accuracy Water Detection</h2>
+        <p>
+          We use advanced water detection machines to identify borewell and well
+          points with up to <strong>99% accuracy</strong>. We find accurate water points through a combination of <strong> advanced German technology and in-depth study of natural geological patterns.</strong> Our service is ideal for
+          farmers, factories, and individuals seeking reliable water sources.
+         
+          <strong>
+            Fill this form we make contact in less than 12hours.
+          </strong>
+        </p>
+      </div>
+    </div>
+  </section>
+    <!-- ===== Contact Us Form ===== -->
+  <section id="Survey" class="contact-section">
+    <h3>Register Your Survey</h3>
+    <form action="https://formspree.io/f/xjkwdnrl" method="POST">
+      <!-- Replace 'your-form-id' with your actual Formspree ID -->
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="mobile">Mobile Number:</label>
+      <input type="tel" id="mobile" name="mobile" required />
+
+      <label for="location">Location:</label>
+      <input type="text" id="location" name="location" required />
+
+      <label for="address">Address:</label>
+      <textarea id="address" name="address" required></textarea>
+
+      <button type="submit">Submit</button>
+    </form>
+  </section>
+
+
+
+  <!-- ===== Services Section ===== -->
+  <section id="services" class="services-section">
+    <h3>Our Services</h3>
+    <ul>
+      <li>Detection of borewell points</li>
+      <li>Detection of well points</li>
+      <li>Use of advanced water detection machinery</li>
+      <li>Use of acid to cean borewell and increase the level of water</li>
+      <li>Service for farmers, companies, and individuals</li>
+    </ul>
+  </section>
+
+
+
+
+    <section class="contact-details"id="contact">
+  <h2>Contact  Us</h2>
+  <div class="contact-box">
+    <p><strong>📞 Mobile:</strong> <a href="tel:+919890942167">+91 9890942167</a></p>
+    <p><strong>📞 Mobile:</strong> <a href="tel:+918767732687">+91 8767732687</a></p>
+    <p><strong>✉️ Email:</strong> <a href="mailto:sarvdnyabhujal01@gmail.com">sarvdnyabhujal01@gmail.com</a></p>
+    <p><strong>📸 Instagram:</strong> <a href="https://instagram.com/sarvadnya_bhujal_sarvhear" target="_blank">sarvadnya_bhujal_sarvhear</a></p>
+    <!-- <p><strong>📘 Facebook:</strong> <a href="https://facebook.com/yourpage" target="_blank">facebook.com/yourpage</a></p> -->
+  </div>
+</section>
+
+  </section>
+    <!-- ===== About Us Section ===== -->
+  <section id="about" class="about-section">
+    <h3>About Us</h3>
+    <p>
+      सर्वज्ञ भूजल सर्व्हेअर is a trusted service provider specializing in accurate detection of well and borewell points using advanced water detection technology. With 99% precision, we help farmers, industries, and individuals locate reliable water sources. Our mission is to provide efficient, scientific solutions to support sustainable water access for all.
+    </p>
+  </section>
+  <!-- WhatsApp Chat Button -->
+
+
+
+</body>
+</html>
